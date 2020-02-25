@@ -33,9 +33,10 @@ MANIFEST
 *.manifest
 *.spec
 
-#devfile
+#devfiles
 getmethods.py
 test.py
+*.mp3
 
 # Installer logs
 pip-log.txt
