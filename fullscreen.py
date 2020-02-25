@@ -1,4 +1,4 @@
-from tkinter import *
+from tkinter import Tk, Frame, Label, TOP, BOTH, BOTTOM, YES, LEFT
 from rssslider import RSSTicker
 from clockclass import ClockClass
 from imageclass import ImageLabel
