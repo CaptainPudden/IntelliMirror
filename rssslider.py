@@ -19,14 +19,13 @@ class RSSTicker(tkinter.Text):
 
     def updatefeed(self):
         self.feed = feedparser.parse(self.feedname)
-        self.after(60000, self.updatefeed)
+        self.after(600000, self.updatefeed)
 
     def updateHeadline(self):
         try:
             self.text += '.....' + self.feed['entries'][self.headlineIndex]['title'].replace(self.removeword, "")
         except IndexError:
             self.headlineIndex = 0
-            self.text = self.feed['entries'][self.headlineIndex]['title']
 
         self.headlineIndex += 1
         if self.headlineIndex > 12:
