@@ -20,6 +20,7 @@ class FullscreenWindow:
         self.tk.bind("<Escape>", self.end_fullscreen)
         self.weather = WeatherClass(self.topFrame, 'http://api.openweathermap.org/data/2.5/weather?appid=c24a72fa13c5723fe9a0224b4f62a829&q=san%20diego',
             bg='black', fg='white', font=('arial', 15), bd=0, highlightbackground='black')
+        self.weather.pack(side=BOTTOM)
         #RSSfeed the first
         self.anime = RSSTicker(self.bottomFrame, 'https://www.reddit.com/r/anime/search.rss?q=flair_name%3A%22Episode%22&restrict_sr=1&sort=new', 'discussion', 
             bg='black', fg='white', font=("arial", 20), bd=0, highlightbackground='black')
