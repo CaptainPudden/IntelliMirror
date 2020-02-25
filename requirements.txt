@@ -1,0 +1,4 @@
+feedparser
+tkinter
+pillow
+Speech_Recognition
