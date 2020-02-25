@@ -1,8 +1,4 @@
 import tkinter
-
-  
-# importing strftime function to 
-# retrieve system's time 
 from time import strftime 
 
 
@@ -14,6 +10,7 @@ class ClockClass(tkinter.Label):
 
 
     def time(self):
+        # lists for ordinators
         dayslistones = [1,21,31]
         dayslisttwos = [2,22]
         dayslistthrees = [3,23]
@@ -31,7 +28,7 @@ class ClockClass(tkinter.Label):
         self.config(text = self.text)
         self.after(1000, self.time)
     
-
+# test clause for making changes
 if __name__ == '__main__':
     root = tkinter.Tk()
     clock = ClockClass(root, bg='black', fg='white', font=("arial", 20), bd=0)
