@@ -1,12 +1,10 @@
 import tkinter
 import requests, json 
   
-# Enter your API key here 
-api_key = "c24a72fa13c5723fe9a0224b4f62a829"
-  
-# base_url variable to store url 
-base_url = "http://api.openweathermap.org/data/2.5/weather?appid=c24a72fa13c5723fe9a0224b4f62a829&q="
-city = 'san%20diego' 
+
+# api_key = "c24a72fa13c5723fe9a0224b4f62a829"
+# base_url/w apikey = "http://api.openweathermap.org/data/2.5/weather?appid=c24a72fa13c5723fe9a0224b4f62a829&q="
+# city = 'san%20diego' 
 
 class WeatherClass(tkinter.Label):
     def __init__(self, parent, weatherurl, **kw):
