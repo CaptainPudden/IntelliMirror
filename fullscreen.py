@@ -2,6 +2,7 @@ from tkinter import Tk, Frame, Label, TOP, BOTH, BOTTOM, YES, LEFT
 from rssslider import RSSTicker
 from clockclass import ClockClass
 from imageclass import ImageLabel
+from weatherclass import WeatherClass
 
 class FullscreenWindow:
 
@@ -17,6 +18,8 @@ class FullscreenWindow:
         self.state = False
         self.tk.bind("<Return>", self.toggle_fullscreen)
         self.tk.bind("<Escape>", self.end_fullscreen)
+        self.weather = WeatherClass(self.topFrame, 'http://api.openweathermap.org/data/2.5/weather?appid=c24a72fa13c5723fe9a0224b4f62a829&q=san%20diego',
+            bg='black', fg='white', font=('arial', 15), bd=0, highlightbackground='black')
         #RSSfeed the first
         self.anime = RSSTicker(self.bottomFrame, 'https://www.reddit.com/r/anime/search.rss?q=flair_name%3A%22Episode%22&restrict_sr=1&sort=new', 'discussion', 
             bg='black', fg='white', font=("arial", 20), bd=0, highlightbackground='black')
